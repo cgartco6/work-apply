@@ -30,3 +30,14 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom'],
   },
 })
+// Update API base URL for production
+export default defineConfig({
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://yourdomain.com',
+        changeOrigin: true,
+      },
+    },
+  },
+})
