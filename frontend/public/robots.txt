@@ -1,0 +1,18 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jobappautomator.co.za/sitemap.xml
+
+# Disallow admin and API endpoints
+Disallow: /admin/
+Disallow: /api/
+Disallow: /uploads/
+Disallow: /static/admin/
+
+# Allow search engines to index main pages
+Allow: /
+Allow: /pricing
+Allow: /how-it-works
+Allow: /regions
