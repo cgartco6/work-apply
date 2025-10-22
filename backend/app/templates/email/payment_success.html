@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Payment Successful - JobApp Automator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Payment Successful! 🎉</h1>
+        <p>Welcome to JobApp Automator</p>
+    </div>
+    
+    <div class="content">
+        <h2>Hi {{ user_first_name }},</h2>
+        
+        <p>Your payment of <strong>R{{ amount }}</strong> has been processed successfully. Your account has been activated and you now have full access to our AI-powered job application service.</p>
+        
+        <h3>What's Next?</h3>
+        <ul>
+            <li>Upload your resume/CV</li>
+            <li>Choose your preferred job locations in South Africa</li>
+            <li>Let our AI enhance your application materials</li>
+            <li>We'll automatically find and apply to relevant positions</li>
+        </ul>
+        
+        <div style="text-align: center;">
+            <a href="{{ dashboard_url }}" class="button">Get Started</a>
+        </div>
+        
+        <p><strong>Payment Details:</strong></p>
+        <ul>
+            <li>Amount: R{{ amount }}</li>
+            <li>Payment Method: {{ payment_method }}</li>
+            <li>Transaction ID: {{ transaction_id }}</li>
+            <li>Date: {{ payment_date }}</li>
+        </ul>
+        
+        <p>If you have any questions or need assistance, please don't hesitate to contact our support team.</p>
+        
+        <p>Best regards,<br>The JobApp Automator Team</p>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 JobApp Automator. All rights reserved.</p>
+        <p>This email was sent to {{ user_email }}</p>
+    </div>
+</body>
+</html>
