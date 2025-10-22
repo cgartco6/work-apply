@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Payment Confirmation - JobApp Automator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9fafb;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        .features {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .feature-icon {
+            background: #667eea;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 12px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8fafc;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Payment Confirmed! 🎉</h1>
+            <p>Your JobApp Automator account is now active</p>
+        </div>
+        
+        <div class="content">
+            <h2>Hi {{ user_first_name }},</h2>
+            
+            <p>Thank you for your payment of <strong>R{{ amount }}</strong>. Your account has been successfully activated and you now have full access to our AI-powered job application service.</p>
+            
+            <div class="features">
+                <h3 style="margin-top: 0;">What You Can Do Now:</h3>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <span><strong>AI Resume Enhancement</strong> - Upload and optimize your resume</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📝</div>
+                    <span><strong>Smart Cover Letters</strong> - Generate personalized applications</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🗺️</div>
+                    <span><strong>Nationwide Job Search</strong> - Cover all South African regions</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <span><strong>Automated Applications</strong> - We handle the entire process</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="{{ dashboard_url }}" class="button">Start Your Job Search</a>
+            </div>
+            
+            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 16px; margin: 20px 0; border-radius: 4px;">
+                <strong>Payment Details:</strong><br>
+                Amount: R{{ amount }}<br>
+                Payment Method: {{ payment_method }}<br>
+                Transaction ID: {{ transaction_id }}<br>
+                Date: {{ payment_date }}
+            </div>
+            
+            <p>If you have any questions or need assistance, our support team is here to help.</p>
+            
+            <p>Best regards,<br>
+            <strong>The JobApp Automator Team</strong></p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 JobApp Automator. All rights reserved.</p>
+            <p>This email was sent to {{ user_email }}. Please do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+</html>
